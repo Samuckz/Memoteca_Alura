@@ -2,9 +2,9 @@
   "pensamentos": [
     {
       "id": 2,
-      "conteudo": "I'll make you feel my Pain",
-      "autoria": "Pain",
-      "modelo": "modelo2"
+      "conteudo": "Left and Rigth",
+      "autoria": "Charlie Puth",
+      "modelo": "modelo3"
     },
     {
       "id": 3,
@@ -17,6 +17,12 @@
       "conteudo": "Vamos falar de nível tecnico?",
       "autoria": "Alberto Carlos",
       "modelo": "modelo2"
+    },
+    {
+      "conteudo": "Que a força esteja contigo!",
+      "autoria": "Mestre Yoda",
+      "modelo": "modelo1",
+      "id": 5
     }
   ]
 }
