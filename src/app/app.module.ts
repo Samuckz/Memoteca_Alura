@@ -31,7 +31,7 @@ import { BotaoCarregarMaisComponent } from './componentes/pensamentos/listar-com
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
