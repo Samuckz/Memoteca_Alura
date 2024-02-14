@@ -2,15 +2,15 @@
   "pensamentos": [
     {
       "id": 2,
-      "conteudo": "Left and Rigth",
+      "conteudo": "You just wanna attention",
       "autoria": "Charlie Puth",
       "modelo": "modelo3"
     },
     {
       "id": 3,
-      "conteudo": "Comunicação com o backEnd",
+      "conteudo": "Validando formulários",
       "autoria": "Angular",
-      "modelo": "modelo3"
+      "modelo": "modelo2"
     },
     {
       "id": 4,
@@ -23,6 +23,24 @@
       "autoria": "Mestre Yoda",
       "modelo": "modelo1",
       "id": 5
+    },
+    {
+      "conteudo": "Formulário Reativo",
+      "autoria": "angular",
+      "modelo": "modelo3",
+      "id": 6
+    },
+    {
+      "conteudo": "Rodrick é o cara",
+      "autoria": "diário de um banan",
+      "modelo": "modelo1",
+      "id": 7
+    },
+    {
+      "conteudo": "PlayStation, PlayStation, PlayStation ..... Jogo da vida! ",
+      "autoria": "tamashiro, yudi",
+      "modelo": "modelo2",
+      "id": 8
     }
   ]
 }

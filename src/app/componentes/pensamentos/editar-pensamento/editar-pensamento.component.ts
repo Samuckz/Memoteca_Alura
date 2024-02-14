@@ -11,13 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class EditarPensamentoComponent implements OnInit {
 
-  pensamento: Pensamento = {
-    id: 0,
-    conteudo: "",
-    autoria: "",
-    modelo: ""
-  }
-
   formulario!: FormGroup;
 
   constructor(
@@ -31,24 +24,23 @@ export class EditarPensamentoComponent implements OnInit {
 
     const id = this.route.snapshot.paramMap.get("id");
     this.service.getPensamentoByID(parseInt(id!)).subscribe((pensamento) => {
-      this.pensamento = pensamento
-    });
-
-    this.formulario = this.formBuilder.group({
-      conteudo: [this.pensamento.conteudo, Validators.compose([
-        Validators.required,
-        Validators.pattern(/(.|\s)*\S(.|\s)*/)
-      ])],
-      autoria: [this.pensamento.autoria, Validators.compose([
-        Validators.required,
-        Validators.minLength(3)
-      ])],
-      modelo: [this.pensamento.modelo]
-  })
+      this.formulario = this.formBuilder.group({
+        id: [pensamento.id],
+        conteudo: [pensamento.conteudo, Validators.compose([
+          Validators.required,
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        ])],
+        autoria: [pensamento.autoria, Validators.compose([
+          Validators.required,
+          Validators.minLength(3)
+        ])],
+        modelo: [pensamento.modelo]
+      })
+    })
   }
 
   editarPensamento(){
-    this.service.editar(this.pensamento).subscribe(() => {
+    this.service.editar(this.formulario.value).subscribe(() => {
       this.router.navigate(["/listarPensamento"])
     })
   }

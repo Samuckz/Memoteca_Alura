@@ -9,7 +9,6 @@
             id="pensamento"
             formControlName="conteudo"
             placeholder="Digite seu pensamento"
-            [(ngModel)]="pensamento.conteudo"
             >
 
             <div class="mensagem__erro"
@@ -24,7 +23,6 @@
             id="autoria"
             formControlName="autoria"
             placeholder="Digite a autoria"
-            [(ngModel)]="pensamento.autoria"
             >
 
             <div class="mensagem__erro"
@@ -40,6 +38,16 @@
                 formulario.get('autoria')?.touched">
                 Autoria deve ter no mínimo 3 caracteres!
             </div>
+
+            
+            <div class="mensagem__erro"
+                *ngIf="formulario.get('autoria')?.errors?.['minusculo']
+                &&
+                formulario.get('autoria')?.touched">
+                Este campo só aceita caracteres minúsculos!
+            </div>
+
+
         
         <label for="modelo">Selecione o modelo do cart</label>
         <div class="container-radio">
@@ -50,7 +58,6 @@
                         id="modelo1"
                         value="modelo1"
                         formControlName="modelo"
-                        [(ngModel)]="pensamento.modelo"
                         >
                     
                     <div class="custom-radio">
@@ -74,7 +81,6 @@
                         id="modelo2"
                         value="modelo2"
                         formControlName="modelo"
-                        [(ngModel)]="pensamento.modelo"
                         >
                     
                     <div class="custom-radio">
@@ -98,7 +104,6 @@
                         id="modelo3"
                         value="modelo3"
                         formControlName="modelo"
-                        [(ngModel)]="pensamento.modelo"
                         >
                     
                     <div class="custom-radio">
